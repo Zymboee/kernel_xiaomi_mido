@@ -45,6 +45,8 @@ static int __init proc_cmdline_init(void)
 {
 	// copy it only once
 	strcpy(updated_command_line, saved_command_line);
+        proc_cmdline_set("androidboot.vbmeta.device_state", "locked");
+        proc_cmdline_set("androidboot.flash.locked", "1");
  	proc_cmdline_set("androidboot.verifiedbootstate", "green");
 	proc_cmdline_set("androidboot.veritymode", "enforcing");
 
